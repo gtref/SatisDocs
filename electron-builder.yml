@@ -1,0 +1,20 @@
+appId: com.satiscorp.satisdocs
+productName: SatisDocs
+
+directories:
+  output: dist
+
+files:
+  - "main/**/*"
+  - "renderer/**/*"
+  - "docs/**/*"
+  - "assets/**/*"
+
+win:
+  target: nsis
+
+linux:
+  target: AppImage
+
+mac:
+  target: dmg

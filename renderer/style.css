@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    display: flex;
+    font-family: sans-serif;
+}
+
+#filetree {
+    width: 250px;
+    background: #1e1e1e;
+    color: #ddd;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#toc {
+    width: 200px;
+    background: #252525;
+    color: #ccc;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.file {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.folder {
+    font-weight: bold;
+    padding: 4px;
+}
+
+.children {
+    margin-left: 15px;
+}
+
+.toc-level-1 { font-weight: bold; margin-top: 10px; }
+.toc-level-2 { margin-left: 10px; }
+.toc-level-3 { margin-left: 20px; }
