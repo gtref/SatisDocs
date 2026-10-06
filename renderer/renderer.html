@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
     <title>SatisDocs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="filetree"></div>
-    <div id="toc"></div>
-    <div id="content"></div>
+    <header class="topbar">
+        <button id="sidebar-toggle" class="topbar-button" type="button" aria-label="Toggle file navigation" aria-controls="sidebar" aria-expanded="false">Files</button>
+        <a class="brand" href="#" aria-label="SatisDocs home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>SatisDocs</span>
+        </a>
+        <span class="topbar-divider" aria-hidden="true"></span>
+        <div class="topbar-document">
+            <span class="eyebrow">DOCUMENTATION</span>
+            <span id="topbar-title" class="topbar-document-title">Loading library</span>
+        </div>
+        <label class="search-box">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input id="doc-search" type="search" placeholder="Filter files" autocomplete="off" aria-label="Filter files">
+        </label>
+        <button id="open-library" class="topbar-button open-library-button" type="button" aria-label="Open a library folder" title="Open a library folder">
+            <span class="full-label">Open library</span>
+            <span class="compact-label">Open</span>
+        </button>
+        <button id="outline-toggle" class="topbar-button" type="button" aria-controls="outline-panel" aria-expanded="false">Contents</button>
+    </header>
+
+    <div class="app-layout">
+        <aside id="sidebar" class="sidebar" aria-label="Documentation library">
+            <div class="sidebar-top">
+                <span id="library-name" class="section-kicker">Library</span>
+                <span id="file-count" class="file-count">0 FILES</span>
+            </div>
+            <nav id="filetree" class="filetree" aria-label="Documentation files"></nav>
+            <div class="sidebar-footer"><span class="online-dot" aria-hidden="true"></span><span>Local library</span></div>
+        </aside>
+
+        <main id="reader" class="reader">
+            <div class="reader-topline">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <span>docs</span><span aria-hidden="true">/</span><span id="breadcrumb-file" class="breadcrumbs-current">Loading</span>
+                </nav>
+                <span id="reading-time" class="reading-time"></span>
+            </div>
+            <article id="content" class="markdown-body" aria-live="polite"></article>
+        </main>
+
+        <aside id="outline-panel" class="outline" aria-label="On this page">
+            <h2 class="outline-heading">On this page</h2>
+            <nav id="toc" class="toc-list" aria-label="Page sections"></nav>
+        </aside>
+    </div>
+
+    <button id="backdrop" class="backdrop" type="button" aria-label="Close navigation panels" tabindex="-1"></button>
+    <script type="module" src="renderer.js"></script>
 </body>
 </html>

@@ -18,3 +18,11 @@ linux:
 
 mac:
   target: dmg
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: SatisDocs
