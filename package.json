@@ -20,7 +20,7 @@
     "marked-footnote": "^1.4.0"
   },
   "devDependencies": {
-    "electron": "^44.5.1",
+    "electron": "^44.9.1",
     "electron-builder": "^26.15.3",
     "eslint": "^10.12.0"
   }
